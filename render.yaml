@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: pair-web
+    repo: https://github.com/LEGEND-RAZA/PAIR-WEB.git
+    branch: main
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: RENDER_APP_NAME
+        sync: false
+        required: true
+        
